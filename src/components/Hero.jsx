@@ -98,7 +98,7 @@ const Hero = () => {
                         </a>
                     </Magnetic>
                     <Magnetic>
-                        <a href="/Assets/Resume/Aditya%20Resume.pdf" download className="inline-block bg-neo-white dark:bg-[#1a1a1a] text-black dark:text-white border-2 border-black dark:border-gray-500 px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-pink hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover gap-2">
+                        <a href="/Assets/Resume/resume.pdf" download className="inline-block bg-neo-white dark:bg-[#1a1a1a] text-black dark:text-white border-2 border-black dark:border-gray-500 px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-pink hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover gap-2">
                             DOWNLOAD CV
                         </a>
                     </Magnetic>
