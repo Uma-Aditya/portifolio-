@@ -4,9 +4,11 @@ const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
-    // Use saved preference if present, otherwise default to light
+    // Respect a saved preference only if the user explicitly toggled before.
+    // This ensures new visitors always see light mode initially.
     const saved = localStorage.getItem('theme');
-    if (saved) return saved;
+    const userToggled = localStorage.getItem('themeUserToggled');
+    if (saved && userToggled === 'true') return saved;
     return 'light';
   });
 
@@ -21,7 +23,12 @@ export const ThemeProvider = ({ children }) => {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+    setTheme(prev => {
+      const next = prev === 'dark' ? 'light' : 'dark';
+      // mark that the user explicitly toggled, so future loads respect their choice
+      localStorage.setItem('themeUserToggled', 'true');
+      return next;
+    });
   };
 
   return (
