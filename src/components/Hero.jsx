@@ -77,10 +77,10 @@ const Hero = () => {
                     </div>
                 </ScrollReveal>
 
-                <h1 className="text-[13vw] md:text-[10vw] leading-[0.8] font-black uppercase tracking-tighter mb-6 dark:text-white">
+                    <h1 className="text-[13vw] md:text-[10vw] leading-[0.8] font-black uppercase tracking-tighter mb-6 dark:text-white">
                     <ScrollReveal delay={0.2}>FULL STACK</ScrollReveal>
                     <ScrollReveal delay={0.4}>
-                        <span className="text-white text-stroke-black dark:text-transparent dark:[WebkitTextStroke:3px_white]" style={{ WebkitTextStroke: '3px black' }}>DEVELOPER</span>
+                        <span className="text-stroke-black">DEVELOPER</span>
                     </ScrollReveal>
                 </h1>
 
